@@ -1,7 +1,7 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Order.Core.Command.Request;
-using Order.Core.Command.Response;
+using Order.Application.Command.Request;
+using Order.Application.Command.Response;
 
 namespace Order.Api.Controllers
 {

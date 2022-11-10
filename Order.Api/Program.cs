@@ -1,6 +1,5 @@
 using MediatR;
 using Order.Consumer;
-using Order.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,11 +10,26 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddMediatR(AppDomain.CurrentDomain.Load("Order.Core"));
-builder.Services.AddMediatR(AppDomain.CurrentDomain.Load("Order.Service"));
+builder.Services.AddMediatR(AppDomain.CurrentDomain.Load("Order.Application"));
 
-builder.Services.AddOrderService();
-builder.Services.AddOrderConsumer();
+builder.Services.AddCap(options =>
+{
+    options.UseMySql("Server=localhost;Port=3306;Database=CapDb;Uid=root;Pwd=my-secret-pw;");
+
+    options.UseRabbitMQ(options =>
+    {
+        options.ConnectionFactoryOptions = options =>
+        {
+            options.Ssl.Enabled = false;
+            options.HostName = "localhost";
+            options.UserName = "guest";
+            options.Password = "guest";
+            options.Port = 5672;
+        };
+    });
+
+    options.FailedRetryCount = 10;
+});
 
 var app = builder.Build();
 

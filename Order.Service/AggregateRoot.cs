@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Order.Application.Command.Response
+namespace Order.Domain
 {
-    public class CreateOrderCommandResponse
+    public class AggregateRoot
     {
-        public bool IsSuccess { get; set; }
     }
 }

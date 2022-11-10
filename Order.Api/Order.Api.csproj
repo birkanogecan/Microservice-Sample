@@ -19,8 +19,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Order.Consumer\Order.Consumer.csproj" />
-    <ProjectReference Include="..\Order.Core\Order.Core.csproj" />
-    <ProjectReference Include="..\Order.Service\Order.Service.csproj" />
+    <ProjectReference Include="..\Order.Core\Order.Application.csproj" />
+    <ProjectReference Include="..\Order.Service\Order.Domain.csproj" />
   </ItemGroup>
 
 </Project>

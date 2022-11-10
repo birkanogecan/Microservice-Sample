@@ -7,16 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Order.Core\Order.Core.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Folder Include="Handlers\Query\" />
+    <Folder Include="Query\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="DotNetCore.CAP" Version="6.2.1" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+    <PackageReference Include="MediatR" Version="11.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Order.Service\Order.Domain.csproj" />
   </ItemGroup>
 
 </Project>

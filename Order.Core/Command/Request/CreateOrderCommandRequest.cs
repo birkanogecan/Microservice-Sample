@@ -1,12 +1,12 @@
 ﻿using MediatR;
-using Order.Core.Command.Response;
+using Order.Application.Command.Response;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Order.Core.Command.Request
+namespace Order.Application.Command.Request
 {
     public class CreateOrderCommandRequest : IRequest<CreateOrderCommandResponse>
     {

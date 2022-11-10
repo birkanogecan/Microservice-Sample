@@ -1,12 +1,12 @@
 ﻿using DotNetCore.CAP;
 using MediatR;
-using Order.Core.Events;
-using Order.Core.Command.Request;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Order.Application.Events;
+using Order.Application.Command.Request;
 
 namespace Order.Consumer.EventHandlers
 {
