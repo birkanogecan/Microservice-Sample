@@ -1,6 +1,6 @@
 using MediatR;
 using Microsoft.AspNetCore.Hosting;
-using Product.Service;
+using Product.Domain;
 
 var builder = WebApplication.CreateBuilder(args);
 

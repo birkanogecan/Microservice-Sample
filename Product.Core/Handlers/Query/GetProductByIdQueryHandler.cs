@@ -1,6 +1,6 @@
 ﻿using MediatR;
-using Product.Core.Query.Request;
-using Product.Core.Query.Response;
+using Product.Application.Query.Request;
+using Product.Application.Query.Response;
 using Product.Service.BLL.Contract;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Product.Service.Handlers.Query
+namespace Product.Application.Handlers.Query
 {
     internal class GetProductByIdQueryHandler : IRequestHandler<GetProductByIdQueryRequest, GetAllProductQueryResponse>
     {

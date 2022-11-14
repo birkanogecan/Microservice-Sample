@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Product.Core.Events
+namespace Product.Application.Events
 {
     public class OrderCreatedEvent
     {

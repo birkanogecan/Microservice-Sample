@@ -41,7 +41,6 @@ namespace Order.Application.Handlers.Command
             catch (Exception ex)
             {
 
-                throw;
             }
 
             CreateOrderCommandResponse createOrderCommandResponse = new CreateOrderCommandResponse()

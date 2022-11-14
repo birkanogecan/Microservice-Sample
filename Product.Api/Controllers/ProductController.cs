@@ -1,9 +1,9 @@
 using DotNetCore.CAP;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Product.Core.Events;
-using Product.Core.Query.Request;
-using Product.Core.Query.Response;
+using Product.Application.Events;
+using Product.Application.Query.Request;
+using Product.Application.Query.Response;
 
 namespace Product.Api.Controllers
 {
